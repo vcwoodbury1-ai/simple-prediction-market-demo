@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------------
+   index.css
+
+   Global styles for the prediction market dashboard. Design intent:
+   a clean dark "trading terminal" feel, since this app's subject
+   matter (markets, prices, probabilities) is naturally suited to
+   that vernacular -- numbers should feel precise and legible, YES/NO
+   should read instantly as green/red signal colors.
+------------------------------------------------------------------- */
+
+:root {
+  --bg-page: #0E1116;
+  --bg-card: #161B22;
+  --bg-card-raised: #1C232D;
+  --border-subtle: #2A313C;
+  --text-primary: #E6E8EB;
+  --text-secondary: #8B93A1;
+  --text-tertiary: #5C6573;
+
+  --color-yes: #2FBF71;
+  --color-yes-bg: rgba(47, 191, 113, 0.12);
+  --color-no: #E5484D;
+  --color-no-bg: rgba(229, 72, 77, 0.12);
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Roboto Mono", Consolas, Monaco, monospace;
+
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Visible keyboard focus ring everywhere -- accessibility floor */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #4C8DFF;
+  outline-offset: 2px;
+}
